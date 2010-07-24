@@ -65,7 +65,6 @@ class StethoscopesController < ApplicationController
     @stethoscope.routines << Routine.new(:name => 'mem_stats', :stethoscope_id => @stethoscope.id)
     @stethoscope.routines << Routine.new(:name => 'hostname', :stethoscope_id => @stethoscope.id)
     @stethoscope.routines << Routine.new(:name => 'number_of_resque_processes', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'hostname', :stethoscope_id => @stethoscope.id)
     @stethoscope.routines << Routine.new(:name => 'processes_summary', :stethoscope_id => @stethoscope.id)
     @stethoscope.routines << Routine.new(:name => 'server_load', :stethoscope_id => @stethoscope.id)
     @stethoscope.routines << Routine.new(:name => 'cpu_usage', :stethoscope_id => @stethoscope.id)
