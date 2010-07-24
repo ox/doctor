@@ -1,0 +1,20 @@
+<div id="webservices" class="frame">
+	<h2><span><%=link_to @routine.stethoscope.server, "/stethoscopes/#{@routine.stethoscope.id}"%> &#9002; <%= @routine.name%></span></h2>
+	<table class="event-log" cellpadding="10">
+		<thead>
+			<th>Time</th>
+			<th>Status</th>
+			<th>Detail Returned</th>
+		</thead>
+		
+		<tbody id="events-tbody">
+			<% @events.reverse.last(10).each do |event| %>
+				<tr>
+					<td><%= time_ago_in_words (event.updated_at) %> ago</td>
+					<td><%= image_tag( get_status_icon( event.status ))%></td>
+					<td><%= render_appropriately( event.returned )%></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

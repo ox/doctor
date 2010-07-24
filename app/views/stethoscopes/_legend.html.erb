@@ -1,0 +1,25 @@
+<div class="legend" id="legend">
+  <h4> Legend </h4>
+  <table>    
+    <tbody id="legend-body">
+		<tr>
+			<td><%= image_tag( get_status_icon( 1 ))%></td>
+			<td>Everything is swell</td>
+		</tr>
+		<tr>
+			<td><%= image_tag( get_status_icon( 2 ) ) %></td>
+			<td>Something is awry but it's non-leathal</td>
+		</tr>
+		<tr>
+			<td><%= image_tag( get_status_icon( 3 ) ) %></td>
+			<td>Gosh golly! Something's wrong!</td>
+		</tr>
+    </tbody>
+  </table>
+    
+  <script type="text/javascript">
+    $(document).ready(function(){ 
+        stashboard.fillLegend(true);
+    });
+  </script>
+</div>

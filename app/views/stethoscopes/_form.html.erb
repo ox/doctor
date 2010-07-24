@@ -1,0 +1,14 @@
+<% form_for(@stethoscope) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :server %><br />
+    <%= f.text_field :server, :size => 80 %><br />
+
+	<%= f.label :description %><br />
+    <%= f.text_area :description, :cols => 80, :rows => 4 %><br />
+  </p>
+  <p>
+    <%= f.submit 'Go' %>
+  </p>
+<% end %>

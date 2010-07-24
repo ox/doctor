@@ -1,0 +1,39 @@
+<div id="webservices" class="frame">
+    
+      <table id="service-list">
+        <thead>
+          <tr>
+            <th>Service</th>
+			<th>Memory</th>
+			<th>Resque</th>
+			<th>Server Load</th>
+        </thead>
+
+        <tbody id="services-body">
+			<% @stethoscopes.each do |stethoscope| %>
+			  <tr>
+			    <td><%=link_to stethoscope.server, stethoscope %>
+					<%= link_to image_tag("status/system-monitor--pencil.png"), edit_stethoscope_path(stethoscope), :style => "float: right;" %> 
+					<%= link_to image_tag("status/system-monitor--minus.png"), stethoscope, :confirm => 'Are you sure?', :method => :delete, :style => "float: right;  margin-right:10px;" %>
+				</td>
+				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('mem_stats').events.last.status ) ) %></td>
+				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %></td>
+				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %></td>
+			  </tr>
+			<% end %>
+        </tbody>
+      </table>
+    <br/>
+	<%= link_to image_tag("status/system-monitor--plus.png")+" New Monitor", new_stethoscope_path, :id => 'add-service', :class => 'button new-stethoscope' %>
+    
+    <%= render :partial => "legend"%>
+    
+  </div>
+
+<% content_for :js do%>
+	<script type="text/javascript">
+      $(document).ready(function(){
+        stashboard.fillIndex();
+      });
+    </script>
+<% end %>

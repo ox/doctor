@@ -1,0 +1,40 @@
+<div id="webservices" class="frame">
+	<h2><span><%=h @stethoscope.server %></span></h2>
+	<p id="serviceDescription"><%=h @stethoscope.description %> <%= link_to 'Edit', edit_stethoscope_path(@stethoscope), :class => 'link' %></p>
+	<br/>
+	<div class='frame'>
+	<% form_for :event, :url => { :id => @stethoscope.id, :action => "ping" }, :method => :post, :html => {'data-remote' => true} do |f| %>
+		<%= f.hidden_field 'ping' %>
+		<%= f.submit "Check All" %>
+	<% end %>
+	<% form_for :routine, :url => { :id => @stethoscope.id, :action => "add_routine" }, :method => :post, :html => {'data-remote' => true} do |f| %>
+		<%= f.text_field :name %>
+		<%= f.submit "Add Routine" %>
+	<% end %>
+	</div>
+	<table class="event-log" cellpadding="10">
+      <thead>
+        <tr>
+          <th class="time-header">Routines</th>
+          <th class="status-header">Status</th>
+		  <th>The Facts</th>
+		  <th></th>
+        </tr>
+      </thead>
+      <tbody id="events-tbody">
+		<% @stethoscope.routines.each do |routine| %>
+			<tr>
+			<td>
+				<%= link_to routine.name, routine %> 
+			</td>
+
+			<td><%= image_tag( get_status_icon( routine.events.last.status) ) %></td>
+			<td><%= render_appropriately(routine.events.last.returned) %></td>
+			<td>
+				<%= link_to image_tag("status/eraser.png"), routine, :method => 'delete', :confirm => "Sure?", :style => "float: right;" %>
+			</td>
+			</tr>
+		<% end %>
+      </tbody>
+    </table>
+</div>
