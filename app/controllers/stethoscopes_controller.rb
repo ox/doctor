@@ -132,7 +132,7 @@ class StethoscopesController < ApplicationController
   
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == "bvdog" && password == "betatest"
+      username == "bvdog" && password == "betatime"
     end
   end
 end
