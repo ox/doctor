@@ -1,4 +1,7 @@
 class StethoscopesController < ApplicationController
+  before_filter :authenticate
+  
+  
   # GET /stethoscopes
   # GET /stethoscopes.xml
   def index
@@ -56,6 +59,23 @@ class StethoscopesController < ApplicationController
     end
   end
   
+  def duplicate
+    @copy_me = Stethoscope.find(params[:id])
+    @new_guy = Stethoscope.new(:server => @copy_me.server, :description => @copy_me.description)
+    
+    @copy_me.routines.each do |routine|
+      @new_guy.routines << Routine.new(:name => routine.name, :stethoscope_id => @new_guy.id)
+    end
+    
+    respond_to do |format|
+      if @new_guy.save
+        format.html { redirect_to edit_stethoscope_path(@new_guy)}
+      else
+        format.html { redirect_to root}
+      end
+    end
+  end
+  
   # POST /stethoscopes
   # POST /stethoscopes.xml
   def create
@@ -105,6 +125,14 @@ class StethoscopesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(stethoscopes_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  protected
+  
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "bvdog" && password == "betatest"
     end
   end
 end

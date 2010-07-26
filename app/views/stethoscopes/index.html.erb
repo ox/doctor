@@ -13,6 +13,7 @@
 			<% @stethoscopes.each do |stethoscope| %>
 			  <tr>
 			    <td><%=link_to stethoscope.server, stethoscope %>
+					<%= link_to image_tag("status/system-monitor-double.png"), {:id => stethoscope, :action => "duplicate"} , :style => "float: right; margin-left: 10px;" %> 
 					<%= link_to image_tag("status/system-monitor--pencil.png"), edit_stethoscope_path(stethoscope), :style => "float: right;" %> 
 					<%= link_to image_tag("status/system-monitor--minus.png"), stethoscope, :confirm => 'Are you sure?', :method => :delete, :style => "float: right;  margin-right:10px;" %>
 				</td>

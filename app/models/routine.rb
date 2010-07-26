@@ -8,7 +8,7 @@ class Routine < ActiveRecord::Base
     puts "performing curl #{stethoscope.server}/#{name}"
     hashed_result = JSON.parse `curl #{stethoscope.server}/#{name}`
     
-    puts hashed_result.inspect, hashed_result.class.to_s
+    #logger.warning hashed_result.inspect, hashed_result.class.to_s
 
     events << Event.new(:status => check_stability(hashed_result), :returned => hashed_result)
     save
