@@ -44,6 +44,12 @@ module ApplicationHelper
       "#{hash['Users']} Users<br/>Up for #{hash['UpTime']}<br/>Load Averages: #{l[0]}, #{l[1]}, #{l[2]}"
     when 'LoadAverages': #HACK, just the load averages, no users or uptime
       "#{hash[0]}, #{hash[1]}, #{hash[2]}"
+    when 'number_of_resque_processes':
+      if hash[0] == 0
+        "No resque/redis running"
+      else
+        "#{hash[0]} #{if hash[0] > 1 then "process".pluralize else "process" end }"
+      end
     when 'cpu_usage':
       "#{hash['User']}% user<br/>#{hash['System']}% system<br/>#{hash['Idle']}% idle"
     when 'passenger_stats':

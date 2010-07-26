@@ -34273,3 +34273,821 @@ Rendering stethoscopes/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
 Rendered stethoscopes/_legend (0.6ms)
 Completed in 31ms (View: 23, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:27:54) [GET]
+  [4;36;1mStethoscope Load (0.4ms)[0m   [0;1mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;35;1mStethoscope Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mRoutine Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (1.3ms)
+Completed in 48ms (View: 39, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:27:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mStethoscope Load (0.3ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;36;1mRoutine Load (0.5ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;35;1mRoutine Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 46ms (View: 36, DB: 7) | 200 OK [http://localhost/stethoscopes/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#ping (for 127.0.0.1 at 2010-07-26 16:27:59) [POST]
+  Parameters: {"commit"=>"Check All", "authenticity_token"=>"LBCXgfwN6/hiMLg0RCtNPILQqnn2iNQ4sNU0v1+lflM=", "id"=>"1", "event"=>{"ping"=>""}}
+  [4;35;1mStethoscope Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.3ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;36;1mEvent Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:00', '2010-07-26 20:28:00', '--- \nmem_stats: \n Wired: \n number: 827\n unit: M\n Inactive: \n number: 1144\n unit: M\n Free: \n number: 18\n unit: M\n Active: \n number: 1983\n unit: M\n Total: \n number: 3972\n unit: M\n Used: \n number: 3954\n unit: M\n', 1, 1)[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Load (0.3ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:00', '2010-07-26 20:28:00', '--- \nhostname: Dinosaurs.local\n', 2, 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Load (0.5ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:00', '2010-07-26 20:28:00', '--- \nnumber_of_resque_processes: 1\n', 3, 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Load (0.3ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:01', '2010-07-26 20:28:01', '--- \nprocesses_summary: \n Sleeping: 68\n Total: 72\n Running: 4\n Threads: 405\n', 4, 1)[0m
+  [4;35;1mSQL (15.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Load (0.5ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:02', '2010-07-26 20:28:02', '--- \nserver_load: \n UpTime: 1 day, 16:52\n Users: 3\n LoadAverages: \n - 0.61\n - 0.48\n - 0.47\n', 5, 1)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Load (0.4ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:28:03', '2010-07-26 20:28:03', '--- \ncpu_usage: \n Idle: \"47.36\"\n User: \"26.31\"\n System: \"26.31\"\n', 6, 1)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/stethoscopes/1
+Completed in 3907ms (DB: 40) | 302 Found [http://localhost/stethoscopes/ping/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:28:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStethoscope Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mStethoscope Load (0.3ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;36;1mRoutine Load (0.5ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.6ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 59ms (View: 48, DB: 7) | 200 OK [http://localhost/stethoscopes/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:29:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStethoscope Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.4ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;35;1mRoutine Load (0.5ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 138ms (View: 127, DB: 8) | 200 OK [http://localhost/stethoscopes/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:29:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStethoscope Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mStethoscope Load (32.4ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;35;1mRoutine Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 74ms (View: 32, DB: 39) | 200 OK [http://localhost/stethoscopes/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:29:35) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 33ms (View: 25, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:32:13) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (53.5ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `keys' for 1:Fixnum) on line #26 of app/views/stethoscopes/index.html.erb:
+23: 				</td>
+24: 				<td>
+25: 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %>
+26: 					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned['number_of_resque_processes'].to_i %></san>
+27: 				</td>
+28: 				<td>
+29: 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %>
+
+    app/helpers/application_helper.rb:30:in `render_appropriately'
+    app/views/stethoscopes/index.html.erb:26
+    app/views/stethoscopes/index.html.erb:13:in `each'
+    app/views/stethoscopes/index.html.erb:13
+    app/controllers/stethoscopes_controller.rb:10:in `index'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:32:33) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `keys' for 1:Fixnum) on line #26 of app/views/stethoscopes/index.html.erb:
+23: 				</td>
+24: 				<td>
+25: 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %>
+26: 					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned['number_of_resque_processes'] %></san>
+27: 				</td>
+28: 				<td>
+29: 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %>
+
+    app/helpers/application_helper.rb:30:in `render_appropriately'
+    app/views/stethoscopes/index.html.erb:26
+    app/views/stethoscopes/index.html.erb:13:in `each'
+    app/views/stethoscopes/index.html.erb:13
+    app/controllers/stethoscopes_controller.rb:10:in `index'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:32:45) [GET]
+  [4;35;1mStethoscope Load (0.5ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 36ms (View: 28, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Mon Jul 26 16:33:11 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kELSE, expecting '}'
+....pluralize if hash[0] > 1 else "process"}"
+                              ^
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/artem/Code/Ruby/Rails/Doctor/app/controllers/application_controller.rb:4
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/commands/server.rb:111
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Mon Jul 26 16:33:12 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kELSE, expecting '}'
+....pluralize if hash[0] > 1 else "process"}"
+                              ^
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/artem/Code/Ruby/Rails/Doctor/app/controllers/application_controller.rb:4
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/commands/server.rb:111
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Mon Jul 26 16:33:16 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kELSE, expecting '}'
+....pluralize if hash[0] > 1 else "process" end}"
+                              ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kEND, expecting '}'
+...hash[0] > 1 else "process" end}"
+                              ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:55: syntax error, unexpected kWHEN, expecting '}'
+    when 'passenger_stats':
+        ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:55: syntax error, unexpected ':', expecting '}'
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:61: syntax error, unexpected kELSE, expecting '}'
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:104: syntax error, unexpected kEND, expecting '}'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/artem/Code/Ruby/Rails/Doctor/app/controllers/application_controller.rb:4
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/commands/server.rb:111
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Mon Jul 26 16:33:17 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kELSE, expecting '}'
+....pluralize if hash[0] > 1 else "process" end}"
+                              ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:51: syntax error, unexpected kEND, expecting '}'
+...hash[0] > 1 else "process" end}"
+                              ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:55: syntax error, unexpected kWHEN, expecting '}'
+    when 'passenger_stats':
+        ^
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:55: syntax error, unexpected ':', expecting '}'
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:61: syntax error, unexpected kELSE, expecting '}'
+/Users/artem/Code/Ruby/Rails/Doctor/app/helpers/application_helper.rb:104: syntax error, unexpected kEND, expecting '}'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/artem/Code/Ruby/Rails/Doctor/app/controllers/application_controller.rb:4
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/artem/.rvm/gems/ree-1.8.7-2010.02/gems/rails-2.3.8/lib/commands/server.rb:111
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/artem/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:33:38) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.2ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 31ms (View: 23, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:33:50) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 33ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:33:54) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.2ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 32ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:34:11) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.5ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 33ms (View: 24, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:34:15) [GET]
+  [4;35;1mStethoscope Load (0.5ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.2ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 34ms (View: 26, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:34:16) [GET]
+  [4;35;1mStethoscope Load (0.3ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 32ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:34:17) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 33ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:34:18) [GET]
+  [4;35;1mStethoscope Load (0.3ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.5ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 34ms (View: 26, DB: 6) | 200 OK [http://localhost/]

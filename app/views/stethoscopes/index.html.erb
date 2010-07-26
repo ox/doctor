@@ -23,7 +23,7 @@
 				</td>
 				<td>
 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %>
-					<span class="light"><%= stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned['number_of_resque_processes'].to_i %> process(es)</san>
+					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned %></san>
 				</td>
 				<td>
 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %>
