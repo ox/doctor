@@ -10,7 +10,7 @@
 		<tbody id="events-tbody">
 			<% @events.reverse.last(10).each do |event| %>
 				<tr>
-					<td><%= time_ago_in_words (event.updated_at) %> ago</td>
+					<td><%= (event.updated_at) %></td>
 					<td><%= image_tag( get_status_icon( event.status ))%></td>
 					<td><%= render_appropriately( event.returned )%></td>
 				</tr>

@@ -233,5 +233,9 @@ input {
     font-size: 10px;
 }
 
+.light {
+	font-size: .8em;
+	color: #aFaFaF;
+}
 
 

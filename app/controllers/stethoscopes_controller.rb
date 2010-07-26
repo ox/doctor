@@ -82,12 +82,12 @@ class StethoscopesController < ApplicationController
     @stethoscope = Stethoscope.new(params[:stethoscope])
     
     #lets ping the server to make sure it all works
-    @stethoscope.routines << Routine.new(:name => 'mem_stats', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'hostname', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'number_of_resque_processes', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'processes_summary', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'server_load', :stethoscope_id => @stethoscope.id)
-    @stethoscope.routines << Routine.new(:name => 'cpu_usage', :stethoscope_id => @stethoscope.id)
+    
+    %w[mem_stats hostname number_of_resque_processes processes_summary server_load cpu_usage].each do |task|
+      routine = Routine.new(:name => task, :stethoscope_id => @stethoscope.id)
+      routine.events << Event.new(:status => 4, :returned => {'Notice' => "server called #{@stethoscope.server} created"}, :routine_id => routine.id)
+      @stethoscope.routines << routine
+    end
 
     respond_to do |format|
       if @stethoscope.save
@@ -104,9 +104,14 @@ class StethoscopesController < ApplicationController
   # PUT /stethoscopes/1.xml
   def update
     @stethoscope = Stethoscope.find(params[:id])
-
+    
+    @stethoscope.routines.each do |routine|
+      routine.events << Event.new(:status => 4, :returned => {"Notice" => "server name changed to #{params[:stethoscope][:server]}"})
+    end
+    
     respond_to do |format|
       if @stethoscope.update_attributes(params[:stethoscope])
+        
         format.html { redirect_to(@stethoscope, :notice => 'Stethoscope was successfully updated.') }
         format.xml  { head :ok }
       else

@@ -17,9 +17,18 @@
 					<%= link_to image_tag("status/system-monitor--pencil.png"), edit_stethoscope_path(stethoscope), :style => "float: right;" %> 
 					<%= link_to image_tag("status/system-monitor--minus.png"), stethoscope, :confirm => 'Are you sure?', :method => :delete, :style => "float: right;  margin-right:10px;" %>
 				</td>
-				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('mem_stats').events.last.status ) ) %></td>
-				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %></td>
-				<td><%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %></td>
+				<td>
+					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('mem_stats').events.last.status ) ) %>
+					<span class="light"><%= stethoscope.routines.find_by_name('mem_stats').events.last.returned['mem_stats']['Free']['number'].to_i %>M free</span>
+				</td>
+				<td>
+					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %>
+					<span class="light"><%= stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned['number_of_resque_processes'].to_i %> process(es)</san>
+				</td>
+				<td>
+					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %>
+					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('server_load').events.last.returned['server_load'] %></span>
+				</td>
 			  </tr>
 			<% end %>
         </tbody>

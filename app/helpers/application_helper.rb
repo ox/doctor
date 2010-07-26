@@ -2,12 +2,14 @@
 module ApplicationHelper
   def get_status_icon(code)
     return case code
-    when 1:
+    when 1: #ALL GREEN
 				 "status/status.png"
-		when 2:
+		when 2: #SOME ISSUES, NON FATAL
 				 "status/status-away.png" 
-	  else
+	  when 3: #HOLY HELL!
 				 "status/status-busy.png"
+		when 4: #PATCH PATCH PATCH/EDIT EDIT EDIT
+			  "status/bandaid.png"
 		end
   end
 
@@ -32,7 +34,7 @@ module ApplicationHelper
     when 'mem_stats':
       #assume all megabytes, for now
       used = hash['Used']['number']
-      total = hash['Wired']['number'] + hash['Active']['number'] + hash['Inactive']['number'] + hash['Free']['number']
+      total = hash['Total']['number']
       percentage_used = (used/total)*100
       "#{used}#{hash['Used']['unit']} used of #{total}#{hash['Used']['unit']}"
     when 'processes_summary':
@@ -40,6 +42,8 @@ module ApplicationHelper
     when 'server_load':
       l = hash['LoadAverages']
       "#{hash['Users']} Users<br/>Up for #{hash['UpTime']}<br/>Load Averages: #{l[0]}, #{l[1]}, #{l[2]}"
+    when 'LoadAverages': #HACK, just the load averages, no users or uptime
+      "#{hash[0]}, #{hash[1]}, #{hash[2]}"
     when 'cpu_usage':
       "#{hash['User']}% user<br/>#{hash['System']}% system<br/>#{hash['Idle']}% idle"
     when 'passenger_stats':
