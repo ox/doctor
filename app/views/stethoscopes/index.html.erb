@@ -18,16 +18,28 @@
 					<%= link_to image_tag("status/system-monitor--minus.png"), stethoscope, :confirm => 'Are you sure?', :method => :delete, :style => "float: right;  margin-right:10px;" %>
 				</td>
 				<td>
+					<% if stethoscope.routines.find_by_name('mem_stats') %>
 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('mem_stats').events.last.status ) ) %>
 					<span class="light"><%= stethoscope.routines.find_by_name('mem_stats').events.last.returned['mem_stats']['Free']['number'].to_i %>M free</span>
+					<% else %>
+					<span class="light">N/A</span>
+					<%end%>
 				</td>
 				<td>
+					<% if stethoscope.routines.find_by_name('number_of_resque_processes') %>
 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('number_of_resque_processes').events.last.status ) ) %>
-					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned %></san>
+					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('number_of_resque_processes').events.last.returned %></span>
+					<% else %>
+					<span class="light">N/A</span>
+					<%end%>
 				</td>
 				<td>
+					<% if stethoscope.routines.find_by_name('server_load') %>
 					<%= image_tag( get_status_icon( stethoscope.routines.find_by_name('server_load').events.last.status ) ) %>
 					<span class="light"><%= render_appropriately stethoscope.routines.find_by_name('server_load').events.last.returned['server_load'] %></span>
+					<% else %>
+					<span class="light">N/A</span>
+					<%end%>
 				</td>
 			  </tr>
 			<% end %>

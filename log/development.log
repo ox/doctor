@@ -35091,3 +35091,281 @@ Rendering stethoscopes/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
 Rendered stethoscopes/_legend (0.6ms)
 Completed in 34ms (View: 26, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:37:28) [GET]
+  [4;36;1mStethoscope Load (0.5ms)[0m   [0;1mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;35;1mStethoscope Columns (13.5ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mRoutine Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.5ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (1.3ms)
+Completed in 63ms (View: 41, DB: 19) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:37:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStethoscope Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.3ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 46ms (View: 36, DB: 7) | 200 OK [http://localhost/stethoscopes/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RoutinesController#destroy (for 127.0.0.1 at 2010-07-26 16:37:36) [DELETE]
+  Parameters: {"authenticity_token"=>"LBCXgfwN6/hiMLg0RCtNPILQqnn2iNQ4sNU0v1+lflM=", "id"=>"3"}
+  [4;36;1mRoutine Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`id` = 3) [0m
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mStethoscope Load (0.3ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 3) [0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Destroy (0.3ms)[0m   [0mDELETE FROM `events` WHERE `id` = 3[0m
+  [4;36;1mEvent Destroy (0.2ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 9[0m
+  [4;35;1mEvent Destroy (0.2ms)[0m   [0mDELETE FROM `events` WHERE `id` = 15[0m
+  [4;36;1mEvent Destroy (0.1ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 21[0m
+  [4;35;1mEvent Destroy (0.1ms)[0m   [0mDELETE FROM `events` WHERE `id` = 27[0m
+  [4;36;1mEvent Destroy (0.1ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 33[0m
+  [4;35;1mEvent Destroy (0.1ms)[0m   [0mDELETE FROM `events` WHERE `id` = 39[0m
+  [4;36;1mEvent Destroy (0.2ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 45[0m
+  [4;35;1mEvent Destroy (0.2ms)[0m   [0mDELETE FROM `events` WHERE `id` = 51[0m
+  [4;36;1mEvent Destroy (0.2ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 57[0m
+  [4;35;1mRoutine Destroy (0.2ms)[0m   [0mDELETE FROM `routines` WHERE `id` = 3[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/stethoscopes/1
+Completed in 34ms (DB: 9) | 302 Found [http://localhost/routines/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:37:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStethoscope Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.3ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 42ms (View: 33, DB: 7) | 200 OK [http://localhost/stethoscopes/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:37:37) [GET]
+  [4;36;1mStethoscope Load (0.5ms)[0m   [0;1mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;35;1mStethoscope Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mRoutine Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mRoutine Load (0.2ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 33ms (View: 24, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:38:54) [GET]
+  [4;35;1mStethoscope Load (0.4ms)[0m   [0mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;36;1mStethoscope Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mRoutine Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `routines`[0m
+  [4;36;1mRoutine Load (0.4ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mEvent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mRoutine Load (0.2ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 38ms (View: 30, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:39:36) [GET]
+  [4;36;1mStethoscope Load (0.6ms)[0m   [0;1mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;35;1mStethoscope Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mRoutine Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.3ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.6ms)
+Completed in 36ms (View: 29, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:39:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStethoscope Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.2ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 109ms (View: 100, DB: 6) | 200 OK [http://localhost/stethoscopes/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#add_routine (for 127.0.0.1 at 2010-07-26 16:39:55) [POST]
+  Parameters: {"commit"=>"Add Routine", "authenticity_token"=>"LBCXgfwN6/hiMLg0RCtNPILQqnn2iNQ4sNU0v1+lflM=", "id"=>"1", "routine"=>{"name"=>"number_of_resque_processes"}}
+  [4;36;1mRoutine Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRoutine Create (0.3ms)[0m   [0;1mINSERT INTO `routines` (`name`, `created_at`, `updated_at`, `stethoscope_id`) VALUES('number_of_resque_processes', '2010-07-26 20:39:55', '2010-07-26 20:39:55', 1)[0m
+  [4;35;1mSQL (33.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mStethoscope Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;35;1mStethoscope Load (0.5ms)[0m   [0mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+  [4;35;1mEvent Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Create (0.3ms)[0m   [0mINSERT INTO `events` (`created_at`, `updated_at`, `returned`, `routine_id`, `status`) VALUES('2010-07-26 20:39:56', '2010-07-26 20:39:56', '--- \nnumber_of_resque_processes: 1\n', 7, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/stethoscopes/1
+Completed in 261ms (DB: 52) | 302 Found [http://localhost/stethoscopes/add_routine/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#show (for 127.0.0.1 at 2010-07-26 16:39:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStethoscope Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mStethoscope Load (0.4ms)[0m   [0;1mSELECT * FROM `stethoscopes` WHERE (`stethoscopes`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering stethoscopes/show
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.stethoscope_id = 1) [0m
+  [4;36;1mRoutine Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 2) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 4) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 6) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 7) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 7) ORDER BY events.id DESC LIMIT 1[0m
+Completed in 49ms (View: 38, DB: 7) | 200 OK [http://localhost/stethoscopes/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StethoscopesController#index (for 127.0.0.1 at 2010-07-26 16:39:58) [GET]
+  [4;36;1mStethoscope Load (0.4ms)[0m   [0;1mSELECT * FROM `stethoscopes` [0m
+Rendering template within layouts/base
+Rendering stethoscopes/index
+  [4;35;1mStethoscope Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `stethoscopes`[0m
+  [4;36;1mRoutine Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `routines`[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'mem_stats') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 1) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mRoutine Load (0.4ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 7) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'number_of_resque_processes') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.routine_id = 7) ORDER BY events.id DESC LIMIT 1[0m
+  [4;36;1mRoutine Load (0.3ms)[0m   [0;1mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `routines` WHERE (`routines`.`name` = 'server_load') AND (`routines`.stethoscope_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.routine_id = 5) ORDER BY events.id DESC LIMIT 1[0m
+Rendered stethoscopes/_legend (0.9ms)
+Completed in 40ms (View: 31, DB: 6) | 200 OK [http://localhost/]
