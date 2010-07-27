@@ -4,20 +4,13 @@ class Routine < ActiveRecord::Base
   belongs_to :stethoscope
   has_many :events, :dependent => :destroy
   
-  def perform
-    puts "performing curl #{stethoscope.server}/#{name}"
-    hashed_result = JSON.parse `curl #{stethoscope.server}/#{name}`
-    
-    #logger.warning hashed_result.inspect, hashed_result.class.to_s
-
+  def perform(hashed_result)
     events << Event.new(:status => check_stability(hashed_result), :returned => hashed_result)
-    save
     
   rescue => exception
     puts exception
     puts exception.backtrace
-    events << Event.new(:status => 3, :returned => { :error => "Server may not be running Stethoscope"} )
-    save
+    events << Event.new(:status => 3, :returned => { :error => "Server may not be running Stethoscope. Returned: #{hashed_result['error']}"} )
   end
 
 private
@@ -54,6 +47,9 @@ private
         else
           status = 3
         end
+      when 'error':
+        status = 3
+        raise "error because of #{v}"
       end
     end
     

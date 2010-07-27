@@ -17,6 +17,7 @@ class StethoscopesController < ApplicationController
   # GET /stethoscopes/1.xml
   def show
     @stethoscope = Stethoscope.find(params[:id])
+    @routines = @stethoscope.routines
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,6 +44,7 @@ class StethoscopesController < ApplicationController
   def ping
     @stethoscope = Stethoscope.find(params[:id])
     @stethoscope.get_status
+    @stethoscope.save
     redirect_to :action => "show"
   end
   
@@ -91,6 +93,7 @@ class StethoscopesController < ApplicationController
 
     respond_to do |format|
       if @stethoscope.save
+        @stethoscope.get_status
         format.html { redirect_to(@stethoscope, :notice => 'Stethoscope was successfully created.') }
         format.xml  { render :xml => @stethoscope, :status => :created, :location => @stethoscope }
       else
